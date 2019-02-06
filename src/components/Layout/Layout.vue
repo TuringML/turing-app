@@ -3,7 +3,6 @@
     <Sidebar/>
     <div class="wrap">
       <Header/>
-      <Chat/>
       <v-touch
         class="content"
         @swipeleft="handleSwipe"
@@ -21,13 +20,12 @@
 
   import Sidebar from "@/components/Sidebar/Sidebar";
   import Header from "@/components/Header/Header";
-  import Chat from "@/components/Chat/Chat";
 
   import "./Layout.scss";
 
   export default {
     name: "Layout",
-    components: { Sidebar, Header, Chat },
+    components: { Sidebar, Header },
     methods: {
       ...mapActions("layout", [
         "switchSidebar",
@@ -38,8 +36,7 @@
     computed: {
       ...mapState("layout", {
         sidebarClose: state => state.sidebarClose,
-        sidebarStatic: state => state.sidebarStatic,
-        chatOpen: state => state.chatOpen
+        sidebarStatic: state => state.sidebarStatic
       })
     },
     created() {

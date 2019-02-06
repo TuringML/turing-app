@@ -5,7 +5,6 @@ import 'expose-loader?$!jquery' // eslint-disable-line
 import Vue from 'vue';
 import { VuePlugin } from 'vuera'
 import BootstrapVue from 'bootstrap-vue';
-import * as VueGoogleMaps from 'vue2-google-maps';
 import VueTouch from 'vue-touch';
 import Trend from 'vuetrend';
 
@@ -16,13 +15,7 @@ import App from './App';
 Vue.use(BootstrapVue);
 Vue.use(VueTouch);
 Vue.use(Trend);
-Vue.use(VueGoogleMaps, {
-  load: {
-    key: 'AIzaSyB7OXmzfQYua_1LEhRdqsoYzyJOPh9hGLg',
-  },
-});
-
-Vue.use(VuePlugin)
+Vue.use(VuePlugin);
 
 Vue.config.productionTip = false;
 

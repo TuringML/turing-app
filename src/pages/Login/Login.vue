@@ -3,12 +3,10 @@
     <b-container>
       <h5 class="logo">
         <i class="fa fa-circle text-gray"/>
-        sing
+        TuringML
         <i class="fa fa-circle text-warning"/>
       </h5>
-      <Widget class="mx-auto" title="<h3 class='mt-0'>Login to your Web App</h3>" customHeader>
-        <p class="text-muted mb-0 mt fs-sm">Use Facebook, Twitter or your email to sign in.</p>
-        <p class="text-muted fs-sm">Don't have an account? Sign up now!</p>
+      <Widget class="mx-auto" title="<h3 class='mt-0'>Login</h3>" customHeader>
         <form class="mt" @submit.prevent="login">
           <b-alert class="alert-sm" variant="danger" :show="!!errorMessage">{{errorMessage}}</b-alert>
           <div class="form-group">
@@ -51,7 +49,6 @@
         </form>
       </Widget>
     </b-container>
-    <footer class="footer">2017 &copy; Sing. Admin Dashboard Template.</footer>
   </div>
 </template>
 
